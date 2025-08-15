@@ -4,10 +4,10 @@ public class CarExec_Chapter15 {
     public static void main(String[] args) {
     	
     	// ギアデータを生成
-    	Car_Chapter15 gearspeed = new Car_Chapter15(1, 10);
+    	Car_Chapter15 car = new Car_Chapter15();
     	
     	// ギア３の場合
-    	gearspeed.changeGear(3);
-    	gearspeed.run();
+    	car.changeGear(3);
+    	car.run();
     }
 }
