@@ -17,7 +17,8 @@ public class Car_Chapter15 {
 		default -> speed = 10;
 		}
 
-		System.out.println("ギア" + gear +  "から" + afterGear +"に切り替わりました");
+		System.out.println("ギア" + gear +  "から" + afterGear +"に切り替えました");
+		gear = afterGear;
 	}
 	
 	public void run() {
