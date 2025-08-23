@@ -7,7 +7,7 @@ public class JyankenExec_Chapter28 {
 		Jyanken_Chapter28 jyanken = new Jyanken_Chapter28();
 		
 		jyanken.playGame();
-		
+		jyanken.scannerClose();
 	}
 
 }

@@ -8,18 +8,21 @@ public class Jyanken_Chapter28 {
 	private Scanner scanner = new Scanner(System.in);
 	
 	//自分のじゃんけんの手を入手するメソッド
-	public String getMyChoice() { 
+	public String getMyChoice() {
+		String input = "";
+		while (true) {
 		System.out.println("自分のじゃんけんの手を入力しましょう");
 		System.out.println("グーはrockのrを入力しましょう");
 		System.out.println("チョキはscissorsのsを入力しましょう");
 		System.out.println("パーはpaperのpを入力しましょう");
 		//入力した内容を取得する
-		String input = scanner.next();
+		input = scanner.next();
 		//入力チェック
 		if(input.equals("r") || input.equals("s") || input.equals("p")) {
-			 
+			 break;
 		}else {
 			System.out.println("r,s,pのどれかを選んでください");
+		}
 		}
 		//入力した内容を戻り値として返す
 		return input;
@@ -30,7 +33,7 @@ public class Jyanken_Chapter28 {
 	public String getRandom() {
 		//乱数でじゃんけんの手をきめる
 		String[] choices = {"r", "s", "p"};
-		int i = (int)(Math.random() * choices.length);
+		int i = (int)(Math.floor(Math.random() * 3));
 		String choice = choices[i];
 		return choice;
 		
@@ -65,11 +68,10 @@ public class Jyanken_Chapter28 {
 			System.out.println("自分の負けです");
 		}
 	}
-	public static void main(String[] args) {
-		Jyanken_Chapter28 game = new Jyanken_Chapter28();
-		game.playGame();
+	public void scannerClose() {
+
 		//Scannerクラスのオブジェクトをクローズする
-		game.scanner.close();
+		scanner.close();
 	}
 
 }
